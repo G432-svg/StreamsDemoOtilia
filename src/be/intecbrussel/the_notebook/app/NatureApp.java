@@ -54,8 +54,6 @@ public class NatureApp {
          * for (Plant plant6 : plants) { System.out.println(plant6); }
          */
 
-
-
         Animal animal0 = new Omnivore("Fox", 50.12, 42.74, 32.02);
         Animal animal1 = new Carnivore("Wolf", 67.2, 1.02, 0.40);
         Animal animal2 = new Herbivore("Deer", 495.23, 2.02, 1.5);
@@ -134,41 +132,47 @@ public class NatureApp {
 
         System.out.println("\n###############");
         System.out.println("Plants: Sort by name");
-        System.out.println(plants);
-
-        notebook.sortAnimalsByName();
-        System.out.println("Animals: Sort by name");
-
-//        Set<Animal> animalSet = new TreeSet<>();
-//        animalSet.add(new Omnivore("Fox"));
-//        animalSet.add(new Carnivore("Wolf"));
-//        animalSet.add(new Herbivore("Deer"));
-//        animalSet.add(new Carnivore("Lion"));
-//        // Displaying the list
-//        System.out.println("The ArrayList is: " +  animalSet);
-
-//        try {
-//            // Checking presence of null
-//            animalSet.contains(null);
-//        }
-//        catch (Exception e) {
-//            System.out.println("Exception: " + e);
-//        }
-//        System.out.println(animalSet);
-
-        System.out.println(animals);
-
-        System.out.println("###############");
+        System.out.println("\n###############");
 
         notebook.sortPlantsByName();
+        List<String> set = new ArrayList<>();
+        set.add("Wild Garlic");
+        set.add("Maculate");
+        set.add("Dandelion");
+        set.add("Spruce");
+        set.add("Burdock");
 
+        System.out.println("before sorting:");
+        System.out.println(set);
+        Collections.sort(set);
+        System.out.println("natural sorting:");
+        Set<String> sortedList = new TreeSet<>(set);
+        System.out.println(set);
 
-        System.out.println(notebook.getAnimalCount());
         System.out.println("\n###############");
-        System.out.println("Animals: Sort by name in notebook");
-        System.out.println("###############");
+        System.out.println("Animals: Sort by name");
+        System.out.println("\n###############");
+
         notebook.sortAnimalsByName();
-        System.out.println(animals);
+
+        List<String> set1 = new ArrayList<>();
+        set1.add("Wolf");
+        set1.add("Deer");
+        set1.add("Bear");
+        set1.add("Lion");
+        set1.add("Leopard");
+        set1.add("Linx");
+        set1.add("Deer");
+        set1.add("Sheep");
+        set1.add("Bison");
+
+        System.out.println("before sorting:");
+        System.out.println(set1);
+        Collections.sort(set1);
+        System.out.println("natural sorting:");
+        Set<String> sortedList1 = new TreeSet<>(set1);
+        System.out.println(set1);
+
 
 
     }
